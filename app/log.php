@@ -12,6 +12,6 @@ use Fluent\Logger\FluentLogger;
 $body = json_decode(file_get_contents("php://input"), true);
 
 $logger = new FluentLogger("fluentd", "24224");
-$logger->post("guests_log", $body);
+$logger->post("client_logger.access", $body);
 
 var_dump(">>>>>>>>> LOG SENT | by php <<<<<<<<<<<") or die;
